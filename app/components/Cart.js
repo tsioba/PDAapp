@@ -48,7 +48,7 @@ export default function Cart({ onOrderComplete }) {
     };
 
     try {
-      const response = await fetch('http://192.168.1.7:8080/api/orders', {
+      const response = await fetch('http://192.168.1.64:8080/api/orders', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

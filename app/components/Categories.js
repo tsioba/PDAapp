@@ -14,7 +14,7 @@ const Categories = ({ onChange }) => {
     // Λήψη των κατηγοριών από το backend
     const fetchCategories = async () => {
       try {
-        const response = await axios.get("http://192.168.1.7:8080/categories"); // Αντικατέστησε με το πραγματικό URL
+        const response = await axios.get("http://192.168.1.64:8080/categories"); // Αντικατέστησε με το πραγματικό URL
         setCategories(response.data);  // Αποθήκευση των δεδομένων στο state
       } catch (err) {
         setError("Something went wrong: " + err.message);  // Σφάλμα αν η αίτηση αποτύχει

@@ -15,7 +15,7 @@ export const ProductProvider = ({ children }) => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://192.168.1.7:8080/api/products');  // Χρησιμοποιούμε το Axios για την αίτηση
+        const response = await axios.get('http://192.168.1.64:8080/api/products');  // Χρησιμοποιούμε το Axios για την αίτηση
         setProducts([...response.data]);
       } catch (err) {
         console.error('Something went wrong: ' + err.message);
@@ -31,7 +31,7 @@ export const ProductProvider = ({ children }) => {
   const fetchProductsBySearchQuery = async () => {
     if (searchQuery.trim()) {
       try {
-        const response = await axios.get(`http://192.168.1.13:8080/api/products/search?name=${searchQuery}`); 
+        const response = await axios.get(`http://192.168.1.64:8080/api/products/search?name=${searchQuery}`); 
         const searchedProducts = response.data;
         if (searchedProducts.length > 0) {
           setProducts(searchedProducts);  // Αν υπάρχει αποτέλεσμα, ενημερώνει τα προϊόντα με τα αποτελέσματα
