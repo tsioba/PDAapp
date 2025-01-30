@@ -16,7 +16,9 @@ const ProductList = ({ activeCategoryId }) => {
   const { cart } = useCart();
   const navigation = useNavigation();
   const [categoryHeights, setCategoryHeights] = useState([]);
-
+  // products.forEach(product => {
+  //   console.log(`Product: ${product.name}, Price: €${product.price}, Category: ${product.category_id}, Filename: ${product.filename}`);
+  // });
 
 
   const animatedRef = useAnimatedRef();

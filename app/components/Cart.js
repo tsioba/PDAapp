@@ -16,8 +16,10 @@ export default function Cart({ onOrderComplete }) {
   const [animations, setAnimations] = useState({}); // Object to store animation values for each item
   const [borderWidth] = useState(new Animated.Value(1)); // Animated value for border width
 
-  const totalPrice = cart.reduce((total, item) => total + item.product.price * item.quantity, 0);
-  const [opacity] = useState(new Animated.Value(0)); // Initial opacity for buttons (hidden)
+  const totalPrice = parseFloat(
+    cart.reduce((total, item) => total + item.product.price * item.quantity, 0).toFixed(2)
+  );
+    const [opacity] = useState(new Animated.Value(0)); // Initial opacity for buttons (hidden)
 
 
 

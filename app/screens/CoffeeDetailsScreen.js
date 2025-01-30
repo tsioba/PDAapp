@@ -56,7 +56,7 @@ const CoffeeDetailsScreen = ({ route }) => {
   
   const [coffeeQuantity, setcoffeeQuantity] = useState((cond&&cartItem.product.coffeeQuantity.includes('Διπλός')?'Διπλός':'Μονός' ));
   const [sugar, setSugar] = useState(cond? cartItem.product.sugar:'Σκέτος');
-  const [kind, setKind] = useState((cond && !cartItem.product.sugar.includes('Σκέτος'))?cartItem.product.kind:"");
+  const [kind, setKind] = useState((cond && !cartItem.product.sugar.includes('Σκέτος'))?cartItem.product.kind:"Λευκή Ζάχαρη");
   const [choice, setChoice] = useState((cond && cartItem.product.choice.includes('decaffeine'))?"decaffeine":"");
   const [comments, setComments] = useState((cond && cartItem.product.comments.length !== 0)?cartItem.product.comments:"");
 
